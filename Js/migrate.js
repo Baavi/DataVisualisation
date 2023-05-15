@@ -1,21 +1,11 @@
 var data = [
-  { name: "Greece", value: 103710 },
-  { name: "Hong Kong", value: 104760 },
-  { name: "USA", value: 110160 },
-  { name: "Germany", value: 111030 },
-  { name: "Korea, South", value: 111530 },
-  { name: "Nepal", value: 131830 },
-  { name: "Scotland", value: 132590 },
-  { name: "Sri Lanka", value: 146950 },
-  { name: "Malaysia", value: 177460 },
-  { name: "Italy", value: 177840 },
-  { name: "South Africa", value: 200240 },
-  { name: "Vietnam", value: 270340 },
-  { name: "Philippines", value: 310050 },
-  { name: "New Zealand", value: 564840 },
-  { name: "China", value: 650640 },
-  { name: "India", value: 721050 },
-  { name: "England", value: 980360 },
+  { name: "Vocational Education and Training sector", value: 11500 },
+  { name: "Higher education sector", value: 77920 },
+  { name: "Student", value: 23720 },
+  { name: "Temporary work skilled", value: 23100 },
+  { name: "Visitor", value: 115580 },
+  { name: "Working Holiday", value: 41790 },
+  { name: "Other temporary visas", value: 18850 },
 ];
 var text = "";
 
