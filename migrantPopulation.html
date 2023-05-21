@@ -37,8 +37,7 @@
 
     <section id="welcome-section" class="welcome-section">
       <!-- All the icons are taken from https://www.flaticon.com/-->
-      <br />
-      <br /><br />
+      <br /><br /><br /><br />
       <img src="images/logo.svg " width="100" height="100" alt="Logo" />
       <h1>Migrant Population in Australia</h1>
 
@@ -46,13 +45,49 @@
         We can help you have an in-depth understanding and<br />
         provide insight into the types of migrations to Australia.
       </p>
-    </section>
+      <br />
+      <section id="welcome-section" class="welcome-section">
+        <style>
+          @import url(//fonts.googleapis.com/css?family=Times+New+Roman);
 
+          .countries {
+            fill: none;
+            stroke: #000;
+            stroke-linejoin: round;
+          }
+          .caption {
+            fill: #000;
+            text-anchor: start;
+            font-size: 14px;
+          }
+          /*      font-weight: bold;*/
+
+          .anchorNode {
+            font-size: 2px;
+          }
+          .legendLinear text.label {
+            font-size: 18px;
+            fill: "#000";
+          }
+
+          .legendThreshold text.label {
+            font-size: 18px;
+            fill: "#000";
+          }
+        </style>
+        <svg width="1200" height="800"></svg>
+        <script src="https://d3js.org/d3.v4.min.js"></script>
+        <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+        <script src="https://d3js.org/d3-geo-projection.v2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.24.0/d3-legend.js"></script>
+      </section>
+    </section>
     <footer id="indexfooter">
       <p>
         Created by Michelle Angelica Lautan & Baakvika Menath Wijesundera &copy;
         2023
       </p>
     </footer>
+    <script src="Js/population.js"></script>
   </body>
 </html>

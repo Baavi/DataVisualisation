@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles/style.css" rel="stylesheet" />
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
     <title>Migration In Australia</title>
     <link rel="icon" href="images/logo.svg" type="image/icon" />
@@ -37,15 +38,45 @@
 
     <section id="welcome-section" class="welcome-section">
       <!-- All the icons are taken from https://www.flaticon.com/-->
-      <br />
-      <br /><br />
+      <br /><br /><br /><br />
       <img src="images/logo.svg " width="100" height="100" alt="Logo" />
       <h1>Migrant Visa Types in Australia</h1>
       <br />
-      <p>Types of temporary visa, NOM arrivals</p>
     </section>
     <section id="welcome-section" class="welcome-section">
-      <div id="chart"></div>
+      <div class="row">
+        <pre><p>Types of temporary visa, NOM arrivals</p><p>Types of temporary visa </p></PRE>
+        <div id="chart" class="column" style="width: 100%"></div>
+        <div id="chart1" class="column" style="width: 100%"></div>
+      </div>
+    </section>
+    <section id="welcome-section" class="welcome-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-sm-9">
+            <button id="play-button" class="btn btn-primary">Play</button>
+            <button id="reset-button" class="btn btn-default">Reset</button>
+            <div id="slider-wrapper">
+              <div id="date-slider"></div>
+            </div>
+          </div>
+          <div class="col-xs-6 col-sm-3">
+            <select id="continent-select" class="form-control">
+              <option selected value="all">All</option>
+              <option value="europe">Europe</option>
+              <option value="asia">Asia</option>
+              <option value="americas">Americas</option>
+              <option value="africa">Africa</option>
+            </select>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div id="chart-area"></div>
+          </div>
+        </div>
+        <div class="row"></div>
+      </div>
     </section>
     <footer id="indexfooter">
       <p>
@@ -54,5 +85,7 @@
       </p>
     </footer>
     <script src="Js/migrate.js"></script>
+    <script src="Js/migratetype.js"></script>
+    <script src="Js/plot.js"></script>
   </body>
 </html>

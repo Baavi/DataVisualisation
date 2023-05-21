@@ -9,6 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="styles/style.css" rel="stylesheet" />
     <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
     <title>Migration In Australia</title>
     <link rel="icon" href="images/logo.svg" type="image/icon" />
@@ -36,9 +38,7 @@
     </header>
 
     <section id="welcome-section" class="welcome-section">
-      <!-- All the icons are taken from https://www.flaticon.com/-->
-      <br />
-      <br /><br />
+      <br /><br /><br /><br />
       <img src="images/logo.svg " width="100" height="100" alt="Logo" />
       <h1>Internal Migration in Australia</h1>
       <br />
@@ -46,13 +46,22 @@
         We can help you have an in-depth understanding and<br />
         provide insight into the types of migrations to Australia.
       </p>
+      <br /><br />
     </section>
-
+    <section id="welcome-section" class="welcome-section">
+      <div id="chart-wrapper">
+        <canvas id="chart"></canvas>
+      </div>
+      <br />
+      <p>The above graph is scaled at 1:1000</p>
+      <br />
+    </section>
     <footer id="indexfooter">
       <p>
         Created by Michelle Angelica Lautan & Baakvika Menath Wijesundera &copy;
         2023
       </p>
     </footer>
+    <script src="Js/internal.js"></script>
   </body>
 </html>
