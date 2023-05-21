@@ -1,11 +1,8 @@
 var data = [
-  { name: "Vocational Education and Training sector", value: 11500 },
-  { name: "Higher education sector", value: 77920 },
-  { name: "Student", value: 23720 },
-  { name: "Temporary work skilled", value: 23100 },
-  { name: "Visitor", value: 115580 },
-  { name: "Working Holiday", value: 41790 },
-  { name: "Other temporary visas", value: 18850 },
+  { name: "Family", value: 22560 },
+  { name: "Skill", value: 27660 },
+  { name: "Special Eligibility and humanitarian", value: 13000 },
+  { name: "Other permanent visas", value: 10630 },
 ];
 var text = "";
 
@@ -31,23 +28,12 @@ var g = svg
 var color = d3
   .scaleOrdinal()
   .domain([
-    "Vocational Education and Training sector",
-    "Higher education sector",
-    "Student",
-    "Temporary work skilled",
-    "Visitor",
-    "Working Holiday",
-    "Other temporary visas",
+    "Family",
+    "Skill",
+    "Special Eligibility and humanitarian",
+    "Other permanent visas",
   ])
-  .range([
-    "#98abc5",
-    "#8a89a6",
-    "#7b6888",
-    "#6b486b",
-    "#a05d56",
-    "#d0743c",
-    "#ff8c00",
-  ]);
+  .range(["#98abc5", "#8a89a6", "#6b486b", "#a05d56"]);
 
 var arc = d3
   .arc()
