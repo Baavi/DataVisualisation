@@ -10,11 +10,12 @@
     <link href="styles/style.css" rel="stylesheet" />
     <script src="https://d3js.org/d3.v4.min.js"></script>
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
     <script src="https://d3js.org/d3-scale-chromatic.v0.3.min.js"></script>
     <title>Migration In Australia</title>
     <link rel="icon" href="images/logo.svg" type="image/icon" />
   </head>
-  <body>
+  <body class="dark-mode">
     <header>
       <nav id="navbar" class="nav">
         <a id="nav-logo" href="index.html"
@@ -42,41 +43,35 @@
       <img src="images/logo.svg " width="100" height="100" alt="Logo" />
       <h1>Migrant Visa Types in Australia</h1>
       <br />
-    </section>
-    <section id="welcome-section" class="welcome-section">
-      <div class="row">
-        <pre><p>Types of temporary visa, NOM arrivals</p><p>Types of temporary visa </p></PRE>
-        <div id="chart" class="column" style="width: 100%"></div>
-        <div id="chart1" class="column" style="width: 100%"></div>
-      </div>
+      <br />
+      <p>
+        The graphs below show which visas are most commonly utilised by migrants
+        to arrive to Australia.
+      </p>
+      <br /><br />
     </section>
     <section id="welcome-section" class="welcome-section">
       <div class="container">
-        <div class="row">
-          <div class="col-xs-6 col-sm-9">
-            <button id="play-button" class="btn btn-primary">Play</button>
-            <button id="reset-button" class="btn btn-default">Reset</button>
-            <div id="slider-wrapper">
-              <div id="date-slider"></div>
-            </div>
-          </div>
-          <div class="col-xs-6 col-sm-3">
-            <select id="continent-select" class="form-control">
-              <option selected value="all">All</option>
-              <option value="europe">Europe</option>
-              <option value="asia">Asia</option>
-              <option value="americas">Americas</option>
-              <option value="africa">Africa</option>
-            </select>
-          </div>
+        <div>
+          <p>Types of temporary visa, NOM arrivals</p>
+          <canvas id="chart" width="700" height="700"></canvas>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-            <div id="chart-area"></div>
-          </div>
+        <div>
+          <p>Types of temporary visa</p>
+          <canvas id="chart1" width="700" height="700"></canvas>
         </div>
-        <div class="row"></div>
       </div>
+      <br />
+      <p>The above graph's is scaled at 1:1000</p>
+      <br />
+    </section>
+    <section id="welcome-section" class="welcome-section">
+      <div id="chart-wrapper">
+        <canvas id="chart2"></canvas>
+      </div>
+      <br />
+      <p>The above graph is scaled at 1:1000</p>
+      <br />
     </section>
     <footer id="indexfooter">
       <p>

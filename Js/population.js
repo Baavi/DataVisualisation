@@ -30,7 +30,7 @@ g.append("text")
   .attr("class", "caption")
   .attr("x", 0)
   .attr("y", -6)
-  .style("font-size", "18px")
+  .style("font-size", "20px")
 
   .text("Resident population by country of birth");
 var labels = [
@@ -59,6 +59,16 @@ d3.queue()
   })
   .await(ready);
 
+//Zoom
+const zoom = d3
+  .zoom()
+  .scaleExtent([1, 8])
+  .translateExtent([
+    [0, 0],
+    [width, height],
+  ])
+  .on("zoom", zoom);
+
 function ready(error, topo) {
   if (error) throw error;
 
@@ -77,4 +87,5 @@ function ready(error, topo) {
       return colorScale(d.total);
     })
     .attr("d", path);
+  svg.call(zoom);
 }

@@ -16,31 +16,43 @@ function makeChart(players) {
     type: "horizontalBar",
     options: {
       maintainAspectRatio: false,
-      legend: {
-        display: true,
-      },
-      scales: {
-        x: {
-          title: {
-            display: true,
-            text: "The above graph is scaled at 1:1000",
+      plugins: {
+        legend: {
+          display: true,
+          labels: {
+            font: {
+              size: 200,
+            },
           },
         },
-        y: {
-          type: "linear",
-          display: true,
-          position: "left",
-          stacked: true,
-        },
-        y1: {
-          type: "linear",
-          display: true,
-          position: "right",
-          stacked: true,
+        scales: {
+          x: {
+            title: {
+              display: true,
+              text: "The above graph is scaled at 1:1000",
+            },
+          },
+          y: {
+            type: "linear",
+            display: true,
+            position: "left",
+            stacked: true,
+          },
+          y1: {
+            type: "linear",
+            display: true,
+            position: "right",
+            stacked: true,
 
-          // grid line settings
-          grid: {
-            drawOnChartArea: false, // only want the grid lines for one axis to show up//
+            // grid line settings
+            grid: {
+              drawOnChartArea: false, // only want the grid lines for one axis to show up//
+            },
+          },
+          y: {
+            ticks: {
+              fontSize: 40,
+            },
           },
         },
       },
