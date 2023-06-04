@@ -1,15 +1,15 @@
 function makeChart(players) {
   var playerLabels = players.map(function (d) {
-    return d.states;
+    return d.year;
   });
   var weeksData1 = players.map(function (d) {
-    return +d.arrivals;
+    return +d.UK;
   });
   var weeksData2 = players.map(function (d) {
-    return +d.departure;
+    return +d.India;
   });
   var weeksData3 = players.map(function (d) {
-    return +d.total;
+    return +d.China;
   });
 
   var chart = new Chart("chart2", {
@@ -61,7 +61,7 @@ function makeChart(players) {
       labels: playerLabels,
       datasets: [
         {
-          label: "Arrival",
+          label: "United Kingdom",
           data: weeksData1,
           borderColor: "rgb(241, 95, 54)",
           backgroundColor: "rgb(241, 95, 54)",
@@ -69,7 +69,7 @@ function makeChart(players) {
           tension: 0.1,
         },
         {
-          label: "Departure",
+          label: "India",
           data: weeksData2,
           borderColor: "rgb(25, 160, 170)",
           backgroundColor: "rgb(25, 160, 170)",
@@ -77,7 +77,7 @@ function makeChart(players) {
           tension: 0.1,
         },
         {
-          label: "Total",
+          label: "China",
           data: weeksData3,
           borderColor: "rgb(106, 90, 205)",
           backgroundColor: "rgb(106, 90, 205)",
@@ -90,4 +90,4 @@ function makeChart(players) {
 }
 
 // Request data using D3
-d3.csv("data/Internal_Migration.csv").then(makeChart);
+d3.csv("data/country-income.csv").then(makeChart);

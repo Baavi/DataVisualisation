@@ -40,6 +40,15 @@ function makeChart(players) {
     options: {
       cutoutPercentage: 50,
       responsive: false,
+      plugins: {
+        legend: {
+          labels: {
+            font: {
+              size: 20,
+            },
+          },
+        },
+      },
     },
   });
 }
